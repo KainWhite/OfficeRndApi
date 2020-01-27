@@ -1,8 +1,17 @@
-﻿namespace OfficeRndApi {
+﻿using Newtonsoft.Json;
+
+namespace OfficeRndApi {
   public class Token {
-    public string access_token { get; set; }
-    public string token_type { get; set; }
-    public int expires_in { get; set; }
+    [JsonProperty("access_token")]
+    public string accessToken { get; set; }
+
+    [JsonProperty("token_type")]
+    public string tokenType { get; set; }
+
+    [JsonProperty("expires_in")]
+    public int expiresIn { get; set; }
+
+    [JsonProperty("scope")]
     public string scope { get; set; }
   }
 }
